@@ -30,6 +30,9 @@ createApp({
         aggiungiElemento(element,event){
             if (this.nuovaVoce.trim() != '') this.lista.push({todo: this.nuovaVoce, done:false});
             this.nuovaVoce='';
+        },
+        doneChange(i,event){
+            this.lista[i].done=!this.lista[i].done;
         }
     }
 }).mount('#app');
