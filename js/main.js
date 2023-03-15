@@ -10,6 +10,10 @@ createApp({
             {
                 todo: 'boh',
                 done: false
+            },
+            {
+                todo: 'prova',
+                done: false
             }
         ]
       }
@@ -18,6 +22,9 @@ createApp({
         isDone(i){
             if (this.lista[i].done) return "check";
             return '';
+        },
+        deleteElement(i,event){
+            this.lista.splice(i,1);
         }
     }
 }).mount('#app');
