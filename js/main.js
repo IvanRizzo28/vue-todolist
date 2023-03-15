@@ -2,6 +2,7 @@ const {createApp} = Vue;
 createApp({
     data() {
       return {
+        nuovaVoce: '',
         lista: [
             {
                 todo: 'Vafo a fare la spesa',
@@ -25,6 +26,10 @@ createApp({
         },
         deleteElement(i,event){
             this.lista.splice(i,1);
+        },
+        aggiungiElemento(element,event){
+            if (this.nuovaVoce.trim() != '') this.lista.push({todo: this.nuovaVoce, done:false});
+            this.nuovaVoce='';
         }
     }
 }).mount('#app');
