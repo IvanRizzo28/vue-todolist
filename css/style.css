@@ -1,0 +1,7 @@
+.check{
+    background-color:cornflowerblue;
+}
+
+.check span{
+    text-decoration: line-through;
+}
